@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Insurance</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A premium admin dashboard template by Mannatthemes" name="description" />
+        <meta content="Mannatthemes" name="author" />
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="../assets/images/icon.jpeg">
+
+        <link href="../assets/plugins/dropify/css/dropify.min.css" rel="stylesheet">
+        <link href="../assets/plugins/filter/magnific-popup.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
+        <!-- App css -->
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    </head>
+    <style>
+    tr:nth-child(even) {
+  background-color: #f2f2f2;
+}</style>
+
+    <body>
+
+         <!-- Top Bar Start -->
+         <div class="topbar">
+
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a href="#" class="logo">
+                    <span>
+                        <img  style="height: 40px;" src="../assets/images/icon.jpeg" alt="logo-small" class="logo-sm">
+                    </span>
+                    
+                                    
+                </a>
+            </div>
+            <!--end logo-->
+            <!-- Navbar -->
+            <nav class="navbar-custom">    
+                <ul class="list-unstyled topbar-nav float-right mb-0"> 
+                    <li class="hidden-sm">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="javascript: void(0);" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            Language Options<img src="../assets/images/language.png" class="ml-2" height="16" alt=""/> <i class="mdi mdi-chevron-down"></i> 
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="javascript: void(0);"><span> English </span></a>
+                        <a href="#" class="dropdown-item" href="javascript: void(0);"><span>Arabic</span></a>
+                        </div>
+    
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <i class="dripicons-bell noti-icon"></i>
+                            <span class="badge badge-danger badge-pill noti-icon-badge">2</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+                            <!-- item-->
+                            <h6 class="dropdown-item-text">
+                                Notifications (18)
+                            </h6>
+                            <div class="slimscroll notification-list">
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                    <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
+                                    <p class="notify-details">Your renewable notification<small class="text-muted">The insured must approach the insurer and make a request for health insurance renewal, citing the policy number, at least 30 days before the policy is due to expire.
+                                    </small></p>
+                                </a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-warning"><i class="mdi mdi-message"></i></div>
+                                    <p class="notify-details">Notication from insurance company<small class="text-muted">The insurer may choose to deny renewal. The customer must seek explanation for such action.</small></p>
+                                </a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-info"><i class="mdi mdi-glass-cocktail"></i></div>
+                                    <p class="notify-details">Your item is shipped<small class="text-muted">It is a long established fact that a reader will</small></p>
+                                </a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-primary"><i class="mdi mdi-cart-outline"></i></div>
+                                    <p class="notify-details">Your order is placed<small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
+                                </a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-danger"><i class="mdi mdi-message"></i></div>
+                                    <p class="notify-details">New Message received<small class="text-muted">You have 87 unread messages</small></p>
+                                </a>
+                            </div>
+                            <!-- All-->
+                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
+                                View all <i class="fi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </li>
+    
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <img src="../assets/images/i.jpeg" alt="profile-user" class="rounded-circle" /> 
+                            <span class="ml-1 nav-user-name hidden-sm">My Account<i class="mdi mdi-chevron-down"></i> </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"><i class="dripicons-user text-muted mr-2"></i> Profile</a>
+                            <a class="dropdown-item" href="#"><i class="dripicons-wallet text-muted mr-2"></i> My Wallet</a>
+                            <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> Settings</a>
+                            <a class="dropdown-item" href="#"><i class="dripicons-lock text-muted mr-2"></i> Lock screen</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul><!--end topbar-nav-->
+    
+                <ul class="list-unstyled topbar-nav mb-0">                        
+                        <li>
+                            <button class="button-menu-mobile nav-link waves-effect waves-light" style="
+                            padding-left: 0px;
+                            padding-right: 0px;
+                            width: 20px;
+                        ">
+                                <i class="dripicons-menu nav-icon" style="
+                            
+                                margin-right: 35px;
+                            "></i>
+                            </button>
+                        </li>
+                       
+                        <li class="hide-phone app-search">
+                                <div class="search-container">
+                                        <form role="search" class="">
+                                                <input type="text" placeholder="Search..." class="form-control" style="margin-left: 30px;">
+                                                <a href=""><i class="fas fa-search"></i></a>
+                                            </form>                                    
+                                      </div>
+    
+                        </li>
+                       
+                    
+                    </ul>
+            </nav>
+            <!-- end navbar-->
+        </div>
+        <!-- Top Bar End -->
+    
+        <div class="page-wrapper">
+            <!-- Left Sidenav -->
+            <div class="left-sidenav">
+                    <div class="main-icon-menu">
+                            <nav class="nav">
+                                <a href="#Analytic" class="nav-link active" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="Dashboard">
+                                    <svg class="nav-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                        <g>
+                                            <path d="M184,448h48c4.4,0,8-3.6,8-8V72c0-4.4-3.6-8-8-8h-48c-4.4,0-8,3.6-8,8v368C176,444.4,179.6,448,184,448z"/>
+                                            <path class="svg-primary" d="M88,448H136c4.4,0,8-3.6,8-8V296c0-4.4-3.6-8-8-8H88c-4.4,0-8,3.6-8,8V440C80,444.4,83.6,448,88,448z"/>
+                                            <path class="svg-primary" d="M280.1,448h47.8c4.5,0,8.1-3.6,8.1-8.1V232.1c0-4.5-3.6-8.1-8.1-8.1h-47.8c-4.5,0-8.1,3.6-8.1,8.1v207.8
+                                                C272,444.4,275.6,448,280.1,448z"/>
+                                            <path d="M368,136.1v303.8c0,4.5,3.6,8.1,8.1,8.1h47.8c4.5,0,8.1-3.6,8.1-8.1V136.1c0-4.5-3.6-8.1-8.1-8.1h-47.8
+                                                C371.6,128,368,131.6,368,136.1z"/>
+                                        </g>
+                                    </svg>
+                                </a><!--end Analytic-->
+        
+        
+                                <a href="#Project" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="Policies">
+                                    <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path class="svg-primary" d="M256 32C132.288 32 32 132.288 32 256s100.288 224 224 224 224-100.288 224-224S379.712 32 256 32zm135.765 359.765C355.5 428.028 307.285 448 256 448s-99.5-19.972-135.765-56.235C83.972 355.5 64 307.285 64 256s19.972-99.5 56.235-135.765C156.5 83.972 204.715 64 256 64s99.5 19.972 135.765 56.235C428.028 156.5 448 204.715 448 256s-19.972 99.5-56.235 135.765z"/>
+                                        <path d="M200.043 106.067c-40.631 15.171-73.434 46.382-90.717 85.933H256l-55.957-85.933zM412.797 288A160.723 160.723 0 0 0 416 256c0-36.624-12.314-70.367-33.016-97.334L311 288h101.797zM359.973 134.395C332.007 110.461 295.694 96 256 96c-7.966 0-15.794.591-23.448 1.715L310.852 224l49.121-89.605zM99.204 224A160.65 160.65 0 0 0 96 256c0 36.639 12.324 70.394 33.041 97.366L201 224H99.204zM311.959 405.932c40.631-15.171 73.433-46.382 90.715-85.932H256l55.959 85.932zM152.046 377.621C180.009 401.545 216.314 416 256 416c7.969 0 15.799-.592 23.456-1.716L201.164 288l-49.118 89.621z"/>
+                                    </svg>
+                                </a><!--end Project-->
+        
+        
+                                <a href="#CRM" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="Categories">
+                                    <svg class="nav-svg" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                        <g>
+                                            <g>
+                                                <path d="M276,68.1v219c0,3.7-2.5,6.8-6,7.7L81.1,343.4c-2.3,0.6-3.6,3.1-2.7,5.4C109.1,426,184.9,480.6,273.2,480
+                                                    C387.8,479.3,480,386.5,480,272c0-112.1-88.6-203.5-199.8-207.8C277.9,64.1,276,65.9,276,68.1z"/>
+                                            </g>
+                                            <path class="svg-primary" d="M32,239.3c0,0,0.2,48.8,15.2,81.1c0.8,1.8,2.8,2.7,4.6,2.2l193.8-49.7c3.5-0.9,6.4-4.6,6.4-8.2V36c0-2.2-1.8-4-4-4
+                                                C91,33.9,32,149,32,239.3z"/>
+                                        </g>
+                                    </svg>
+                                </a><!--end CRM-->
+        
+                                <a href="#Others" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="Profile">
+                                    <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path d="M70.7 164.5l169.2 81.7c4.4 2.1 10.3 3.2 16.1 3.2s11.7-1.1 16.1-3.2l169.2-81.7c8.9-4.3 8.9-11.3 0-15.6L272.1 67.2c-4.4-2.1-10.3-3.2-16.1-3.2s-11.7 1.1-16.1 3.2L70.7 148.9c-8.9 4.3-8.9 11.3 0 15.6z"/>
+                                        <path class="svg-primary" d="M441.3 248.2s-30.9-14.9-35-16.9-5.2-1.9-9.5.1S272 291.6 272 291.6c-4.5 2.1-10.3 3.2-16.1 3.2s-11.7-1.1-16.1-3.2c0 0-117.3-56.6-122.8-59.3-6-2.9-7.7-2.9-13.1-.3l-33.4 16.1c-8.9 4.3-8.9 11.3 0 15.6l169.2 81.7c4.4 2.1 10.3 3.2 16.1 3.2s11.7-1.1 16.1-3.2l169.2-81.7c9.1-4.2 9.1-11.2.2-15.5z"/>
+                                        <path d="M441.3 347.5s-30.9-14.9-35-16.9-5.2-1.9-9.5.1S272.1 391 272.1 391c-4.5 2.1-10.3 3.2-16.1 3.2s-11.7-1.1-16.1-3.2c0 0-117.3-56.6-122.8-59.3-6-2.9-7.7-2.9-13.1-.3l-33.4 16.1c-8.9 4.3-8.9 11.3 0 15.6l169.2 81.7c4.4 2.2 10.3 3.2 16.1 3.2s11.7-1.1 16.1-3.2l169.2-81.7c9-4.3 9-11.3.1-15.6z"/>
+                                    </svg>
+                                </a><!--end Others-->
+        
+        
+                                <a href="#Authentication" class="nav-link" data-toggle="tooltip-custom" data-placement="top" title="" data-original-title="Logout">
+                                    <svg class="nav-svg" version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                        <g>
+                                            <path class="svg-primary" d="M376,192h-24v-46.7c0-52.7-42-96.5-94.7-97.3c-53.4-0.7-97.3,42.8-97.3,96v48h-24c-22,0-40,18-40,40v192c0,22,18,40,40,40
+                                                h240c22,0,40-18,40-40V232C416,210,398,192,376,192z M270,316.8v68.8c0,7.5-5.8,14-13.3,14.4c-8,0.4-14.7-6-14.7-14v-69.2
+                                                c-11.5-5.6-19.1-17.8-17.9-31.7c1.4-15.5,14.1-27.9,29.6-29c18.7-1.3,34.3,13.5,34.3,31.9C288,300.7,280.7,311.6,270,316.8z
+                                                    M324,192H188v-48c0-18.1,7.1-35.1,20-48s29.9-20,48-20s35.1,7.1,48,20s20,29.9,20,48V192z"/>
+                                        </g>
+                                    </svg>
+                                </a> <!--end Authentication--> 
+        
+                            </nav><!--end nav-->
+                        </div><!--end main-icon-menu-->
+        
+                        <div class="main-menu-inner">
+                            <div class="menu-body slimscroll">
+                                <div id="Analytic" class="main-icon-menu-pane active">
+                                    <!-- <div class="title-box">
+                                        <h6 class="menu-title">Dashboard</h6>       
+                                    </div> -->
+                                    <ul class="nav">
+                                        <li class="nav-item"><a class="nav-link active" href="customer.html"><i class="dripicons-user-group"></i>Dashboard</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#"><i class="dripicons-user-group"></i>Searches</a></li>
+                                        <!-- <li class="nav-item"><a class="nav-link" href="../analytics/analytics-reports.html"><i class="dripicons-document"></i>Reports</a></li>  -->
+                                    </ul>
+                                </div><!-- end Analytic -->
+                                <div id="Project" class="main-icon-menu-pane">
+                                    <!-- <div class="title-box">
+                                        <h6 class="menu-title">Policies</h6>        
+                                    </div> -->
+                                    <ul class="nav">
+                                        <li class="nav-item"><a class="nav-link"><i class="dripicons-view-thumb"></i>التأمينات الاجتماعية</a></li>
+                                        <li class="nav-item"><a class="nav-link"><i class="dripicons-user-id"></i>تأمين المسؤولية</a></li>
+                                        <li class="nav-item"><a class="nav-link"><i class="dripicons-calendar"></i>التأمين الشخصي</a></li>
+                                        <li class="nav-item"><a class="nav-link"><i class="dripicons-trophy"></i>خطة الوقف</a></li>
+                                        <li class="nav-item"><a class="nav-link"><i class="dripicons-jewel"></i>التأمين على الحياة</a></li>
+                                    </ul>
+                                </div><!-- end  Project-->
+                                <div id="CRM" class="main-icon-menu-pane">
+                                    <!-- <div class="title-box">
+                                        <h6 class="menu-title">Categories</h6>           
+                                    </div> -->
+                                    <ul class="nav">
+                                        <li class="nav-item"><a class="nav-link"><i class="dripicons-device-desktop"></i>Pet Products</a></li>
+                                        <li class="nav-item"><a class="nav-link"><i class="dripicons-view-apps"></i>الزراعة</a></li>
+                                        <li class="nav-item"><a class="nav-link"><i class="dripicons-list"></i>مواد كيميائية</a></li>
+                                        <li class="nav-item"><a class="nav-link"><i class="dripicons-article"></i>Garden Supplies</a></li>
+                                        <li class="nav-item"><a class="nav-link"><i class="dripicons-cart"></i>منتج الجمال</a></li>
+                                        <li class="nav-item"><a class="nav-link"><i class="dripicons-card"></i>Vehicles and accessories</a></li>
+                                    </ul>
+                                </div><!-- end Ecommerce -->
+                              
+                                <div id="Others" class="main-icon-menu-pane">
+                                    <!-- <div class="title-box">
+                                        <h6 class="menu-title">Profile</h6>      
+                                    </div> -->
+                                    <ul class="nav">
+                                            <li class="nav-item"><a class="nav-link"><i class="dripicons-device-desktop"></i>My Profile</a></li>
+                                            <li class="nav-item"><a class="nav-link"><i class="dripicons-view-apps"></i>Claim Status</a></li>
+                                            <li class="nav-item"><a class="nav-link"><i class="dripicons-list"></i>Responses</a></li>
+                                        </ul>
+                                </div><!-- end Others -->
+        
+                                <div id="Authentication" class="main-icon-menu-pane">
+                                    <!-- <div class="title-box">
+                                        <h6 class="menu-title">Logout</h6>     
+                                    </div> -->
+                                    <ul class="nav">
+                                        <li class="nav-item"><a class="nav-link" href="../index.html"><i style="display: none"></i>Log out</a></li>
+        
+                                    </ul>
+                                </div><!-- end Authentication-->
+                            </div><!--end menu-body-->
+                        </div><!-- end main-menu-inner-->
+            </div>
+            <!-- end left-sidenav-->    
+        
+            <!-- Page Content-->
+            <div class="page-content">
+
+                    <div class="container-fluid">
+                        <!-- Page-Title -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="page-title-box">
+                                    
+                                    <h4 class="page-title">Motor Insurance</h4>
+                                </div><!--end page-title-box-->
+                            </div><!--end col-->
+                        </div>
+                        <!-- end page title end breadcrumb -->
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+        <form id="form-horizontal" class="form-horizontal">
+            
+                <fieldset>
+                        <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label for="txtFirstNameBilling" class="col-lg-3 col-form-label">Policy Number</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtFirstNameBilling" name="txtFirstNameBilling"  placeholder="1000-2020-0000" type="text" class="form-control">
+                                        </div>
+                                    </div><!--end form-group-->
+                                </div><!--end col-->
+                
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="txtFirstNameBilling" class="col-lg-3 col-form-label">Insured Name</label>
+                               
+                                <div class="col-lg-9">
+                                    <input id="txtFirstNameBilling" name="txtFirstNameBilling"  placeholder="Tamil" type="text" class="form-control">
+                                </div>
+                            </div><!--end form-group-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                    <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="txtLastNameBilling" class="col-lg-3 col-form-label">Policy Period</label>
+                                    <label style="margin-top: 8px; margin-left: 15px">From</label>
+                                    <div class="col-lg-3">
+                                            <input id="txtCompanyBilling" name="txtCompanyBilling" type="text"   placeholder="21-02-2019" class="form-control">
+                                        </div>
+                                        <label style="margin-top: 8px; margin-left: 15px">To</label>
+                                        <div class="col-lg-3">
+                                                <input id="txtCompanyBilling" name="txtCompanyBilling" type="text"   placeholder="21-02-2020" class="form-control">
+                                            </div>
+                                </div><!--end form-group-->
+                            </div><!--end col-->
+                     
+                           
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="txtLastNameBilling" class="col-lg-3 col-form-label">Mobile No.</label>
+                                <div class="col-lg-9">
+                                    <input id="txtLastNameBilling" name="txtLastNameBilling" type="text"  placeholder="9650025611" class="form-control">
+                                </div>
+                            </div><!--end form-group-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="txtCompanyBilling" class="col-lg-3 col-form-label">Alternate Contact No.</label>
+                                <div class="col-lg-9">
+                                    <input id="txtCompanyBilling" name="txtCompanyBilling" type="text"   placeholder="6521086479" class="form-control">
+                                </div>
+                            </div><!--end form-group-->
+                        </div><!--end col-->
+                   
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="txtEmailAddressBilling" class="col-lg-3 col-form-label">Email Id</label>
+                                <div class="col-lg-9">
+                                    <input id="txtEmailAddressBilling" name="txtEmailAddressBilling" type="text"  placeholder="tamil@gmail.com" class="form-control">
+                                </div>
+                            </div><!--end form-group-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="txtAddress1Billing" class="col-lg-3 col-form-label">Address</label>
+                                <div class="col-lg-9">
+                                    <input id="txtAddress1Billing" name="txtAddress1Billing"  type="textarea"   placeholder="33/63B,Gandhi Street,Chennai" rows="4"   class="form-control"></textarea>
+                                </div>
+                            </div><!--end form-group-->
+                        </div><!--end col-->
+                    
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="txtAddress2Billing" class="col-lg-3 col-form-label">Plate No.</label>
+                                <div class="col-lg-9">
+                                        <input id="txtCityBilling" name="txtCityBilling" type="text"  placeholder="TN 54 R 7568" class="form-control">
+                                </div>
+                            </div><!--end form-group-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="txtCityBilling" class="col-lg-3 col-form-label">Chasis No.</label>
+                                <div class="col-lg-9">
+                                    <input id="txtCityBilling" name="txtCityBilling" type="text"  placeholder="600132CTZP78900" class="form-control">
+                                </div>
+                            </div>
+                            </div>
+                      
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="txtStateProvinceBilling" class="col-lg-3 col-form-label">Vehicle Model</label>
+                                <div class="col-lg-9">
+                                    <input id="txtStateProvinceBilling" name="txtStateProvinceBilling" type="text"  placeholder="Tata Safari Storme" class="form-control">
+                                </div>
+                            </div><!--end form-group-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="txtTelephoneBilling" class="col-lg-3 col-form-label">Vehicle Make</label>
+                                <div class="col-lg-9">
+                                    <input id="txtTelephoneBilling" name="txtTelephoneBilling" type="text"  placeholder="TATA Motors"  class="form-control">
+                                </div>
+                            </div><!--end form-group-->
+                        </div><!--end col-->
+                   
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="txtFaxBilling" class="col-lg-3 col-form-label">Vehicle Value</label>
+                                <div class="col-lg-9">
+                                    <input id="txtFaxBilling" name="txtFaxBilling" type="text" placeholder="1,332,000"   style="direction: ltr; text-align:right;" class="form-control">
+                                </div>
+                            </div><!--end form-group-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                    <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="txtTelephoneBilling" class="col-lg-3 col-form-label">Vehicle Variant</label>
+                                    <div class="col-lg-9">
+                                        <input id="txtTelephoneBilling" name="txtTelephoneBilling" type="text"  placeholder="Blue Color" class="form-control">
+                                    </div>
+                                </div><!--end form-group-->
+                            </div><!--end col-->
+                     
+                       
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                            <label for="txtFaxBilling" class="col-lg-3 col-form-label">Registered City</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtTelephoneBilling" name="txtTelephoneBilling" type="text" placeholder="Chennai"  class="form-control">
+                                        </div>
+                                    </div><!--end form-group-->
+                                </div><!--end col-->
+                            </div><!--end row-->
+                            <div class="row">
+      
+                                <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label for="txtFaxBilling" class="col-lg-3 col-form-label"> Status</label>
+                                            <div class="col-lg-9">
+                                                <input id="txtFaxBilling" name="txtFaxBilling" type="text"  placeholder="Under Review"  class="form-control">
+                                            </div>
+                                        </div><!--end form-group-->
+                                    </div><!--end col-->
+                            </div><!--end row-->
+                           
+                            <a class="btn btn-primary"  style="float: right; margin-right: 10px;"  href="#"  data-toggle="modal" data-target="#exampleModal1" role="button">Endorsement &nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="btn btn-primary"  style="float: right; margin-right: 10px;"   href="#"  data-toggle="modal" data-target="#exampleModal3" role="button">Cancel &nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="btn btn-primary" href="#" id="payment" style="float: right; margin-right: 10px;" role="button">Make Payment</a>
+                            <a class="btn btn-primary"   style="float: right; margin-right: 10px;" id="renewBtnClick"  href="#" role="button">Renew</a>
+                            <button type="button" class="btn btn-primary"  style="float: right; margin-right: 10px; height: 40px; width: 125px;"data-toggle="modal" data-target="#exampleModal" role="button">Notify Claim</a>
+                        <button type="button" class="btn btn-primary" style="width: 100px; height: 40px;" data-toggle="modal" data-target="#exampleModal2" role="button">Timeline</button>
+                        <button type="button" class="btn btn-primary" style="width: 200px; height: 40px;"  data-toggle="tooltip" data-placement="top" title="Download Policy Documents"> Download Document&nbsp;&nbsp;<i class="fas fa-file"></i></button>
+                    </fieldset><!--end fieldset-->
+
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Claim Details</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" style="margin-left: 80px">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                      <label>Loss Date</label>
+                                      <input type="date" id="birthday" name="birthday" style="
+                                      width: 465px;
+                                      height: 40px;
+                                  ">
+                                            </div>
+                                    <div class="form-group">
+                                      <label>Description of Loss</label>
+                                      <textarea id="txtAddress2Billing" name="txtAddress2Billing" rows="3" class="form-control"></textarea>
+                                                
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Incident Details</label>
+                                        <textarea id="txtAddress2Billing" name="txtAddress2Billing" rows="3" class="form-control"></textarea>
+                                    </div>
+                                      <div class="form-group">
+                                        <label>Upload of Documents</label>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                      </div>
+
+                                   </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal" style="
+                              width: 100px;
+                              height: 40px;
+                          ">Cancel</button>
+                              <button type="button" class="btn btn-primary"  data-dismiss="modal" style="width: 100px; height: 40px;">Submit</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Endorsement Details</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" style="margin-left: 80px">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                      <label>Endorsement Effective Date</label>
+                                      <input type="date" id="birthday" name="birthday" style="
+                                      width: 465px;
+                                      height: 40px;
+                                  ">
+                                            </div>
+                                    <div class="form-group">
+                                      <label>Endorsement Type</label>
+                                      <select class="form-control">
+                                                                                           
+                                    
+                                        <option>Extend</option>
+                                        <option>General</option>
+                                    </select>
+                                    </div>
+                                  
+                                    <div class="form-group">
+                                        <label>  Endorsement Description</label>
+                                        <textarea id="txtAddress2Billing" name="txtAddress2Billing" rows="3" class="form-control"></textarea>
+                                         </div>
+                                         <div class="form-group">
+                                                <label>Upload of Documents</label>
+                                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                              </div>
+                                    
+                                   </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal" style="
+                              width: 100px;
+                              height: 40px;
+                          ">Cancel</button>
+                              <button type="button" class="btn btn-primary"  data-dismiss="modal" style="width: 100px; height: 40px;">Submit</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content" style="width: 1248px;left: -355px;">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Timeline</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true" style="margin-left: 80px">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                <img src="../assets/images/Policy TL (2).png"/>
+                                </div>
+                                <div class="modal-footer">
+                                
+                                  <button type="button" class="btn btn-primary"  data-dismiss="modal" style="width: 100px; height: 40px;">Ok</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Cancellation Details</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true" style="margin-left: 80px">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                              <label>Cancellation Date</label>
+                                              <input type="date" id="birthday" name="birthday" style="
+                                              width: 465px;
+                                              height: 40px;
+                                          ">
+                                                    </div>
+                                          
+                                          
+                                            <div class="form-group">
+                                                <label>	Reason for Cancellation</label>
+                                                <textarea id="txtAddress2Billing" name="txtAddress2Billing" rows="3" class="form-control"></textarea>
+                                                 </div>
+                                              
+                                           </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-danger" data-dismiss="modal" style="
+                                      width: 100px;
+                                      height: 40px;
+                                  ">Cancel</button>
+                                      <button type="button" class="btn btn-primary"  data-dismiss="modal" style="width: 100px; height: 40px;">Submit</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+    
+              
+           
+                  <!-- jQuery  -->
+                  <script src="../assets/js/jquery.min.js"></script>
+                  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+                  <script src="../assets/js/metisMenu.min.js"></script>
+                  <script src="../assets/js/waves.min.js"></script>
+                  <script src="../assets/js/jquery.slimscroll.min.js"></script>
+               
+                  <script src="../assets/plugins/sweet-alert2/sweetalert2.min.js"></script>
+                  <script src="../assets/plugins/moment/moment.js"></script> 
+                  <script src="../assets/pages/jquery.footable.init.js"></script> 
+                  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+
+           
+           
+                   <!-- App js -->
+                   <script src="../assets/js/app.js"></script>
+                   <script>
+                   $(function (){
+
+
+                    $('#renewBtnClick').on('click', function () {
+                    
+                    swal({
+                    title:"Renewal?",
+                    type:"success",
+                    text:"Do you wish to renew your motor insurance now?"
+                    }).then(function() {
+                    window.location.href="../projects/active.html";
+                    }
+                    );
+                    
+                    
+                    });
+                    
+                     });
+                     document.getElementById('payment').onclick = function(){
+                    	swal("Good job!", "Your payment request has been confirmed", "success");
+};
+
+
+
+                    
+                              </script>
+
+               </body>
+           </html>
