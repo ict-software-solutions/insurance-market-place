@@ -26,10 +26,50 @@
         <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
 
     </head>
-<style>
-   
-  
-</style>
+    <style>
+            
+       
+        * {box-sizing: border-box}
+        
+        /* Set height of body and the document to 100% */
+        body, html {
+          height: 100%;
+          margin: 0;
+          font-family: Arial;
+        }
+        
+        /* Style tab links */
+        .tablink {
+          background-color: #f1f5fa;
+          color:black;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          font-size: 17px;
+          width: 50%;
+        }
+        
+        .tablink:hover {
+          background-color: #f1f5fa;
+        }
+        
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+          color: black;
+          display: none;
+          padding: 100px 20px;
+          height: 100%;
+        }
+        
+        #Home {background-color: white;}
+        #Share {background-color: white;}
+        #News {background-color: white;}
+       
+       
+        </style>
+
     <body>
 
          <!-- Top Bar Start -->
@@ -282,44 +322,59 @@
             </div>
             <!-- end left-sidenav-->
     <!-- Page Content-->
-    <div class="page-content">
-
-            <div class="container-fluid">
-                <!-- Page-Title -->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="page-title-box">
-                           
-                            <h4 class="page-title">In Progress</h4><br/>
-                            <h5>Outward Request</h5>
-                        </div><!--end page-title-box-->
-                    </div><!--end col-->
-                </div>
-                <!-- end page title end breadcrumb -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-
-                                
-
-                                <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                                    <thead>
-                                    <tr>
-
-                                        <th>Compare</th>
-                                        <th>Req No.</th>
-                                        <th>Request Date</th>
-                                        <th>Description Of Req</th>
-                                        <th>Insurer/Brokers</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                    </thead>
 
 
-                                    <tbody>
-                                                      <tr>
+    <div class="container-fluid">
+                      
+        <!-- Page-Title -->
+        <div class="row">
+              <div class="col-sm-12">
+                  <div class="page-title-box">
+                    <div class="float-right">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="customer.html">dashboard</a></li>
+                            <li class="breadcrumb-item active">In Progress</li>
+                        </ol> 
+                        </div>
+                        <h4>In Progress</h4>
+                    
+                  </div><!--end page-title-box-->
+              </div><!--end col-->
+          </div>
+          <!-- end page title end breadcrumb -->
+                               
+                                    
+      <button class="tablink" onclick="openPage('Home', this, 'white')"  id="defaultOpen" style="width: 50%; color:black">Inward Request</button>
+      <button class="tablink" onclick="openPage('Share', this, 'white')"  style="width: 50%; color:black">notification</button>
+      
+      
+      
+      
+      <div id="Home" class="tabcontent" style="height: 510px;">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        
+
+                        <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                            <thead>
+                            <tr>
+
+                                <th>Compare</th>
+                                <th>Req No.</th>
+                                <th>Request Date</th>
+                                <th>Description Of Req</th>
+                                <th>Insurer/Brokers</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+
+
+                            <tbody>
+                                              <tr>
 <td style="  text-align:center;
 "><input type="checkbox" name="name1"  text-align:center;  onchange="window.location.href='compareOffers.html'" /></td>
 <td><a href="motorIns.html">R899912 </a> </td>
@@ -331,158 +386,144 @@
 <td> Request for a car insurance</td>
 
 <td>AXA Insurance</td>
-       
+
 <td>Payment Pending</td>
 
 <td>   <a href="#" class="mr-2" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit text-info font-16"></i></a>
-    <a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt text-danger font-16"></i></a>
-    <a href="#" class="mr-2" data-toggle="tooltip" data-placement="top" title="Payment Pending"><i class="fas fa-credit-card  text-warning font-16"></i></a>
-    <a href="#"  class="mr-2"  data-toggle="tooltip" data-placement="top" title="Confirm"><i class="fa fa-check-circle text-success font-16"  id="confirm"  ></i>
-        <a href="#" data-toggle="tooltip" data-placement="top" title="Pull back"><i class="fas fa-step-backward text-dark font-16"></i></a>
+<a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+<a href="#" class="mr-2" data-toggle="tooltip" data-placement="top" title="Payment Pending"><i class="fas fa-credit-card  text-warning font-16"></i></a>
+<a href="#"  class="mr-2"  data-toggle="tooltip" data-placement="top" title="Confirm"><i class="fa fa-check-circle text-success font-16"  id="confirm"  ></i>
+<a href="#" data-toggle="tooltip" data-placement="top" title="Pull back"><i class="fas fa-step-backward text-dark font-16"></i></a>
 </td>
-                                        </tr>
-                                        <tr>
-                                                <td style="text-align: center;" ><input type="checkbox" name="name1"  text-align:center;  onchange="window.location.href='compareOffers.html'" /></td>
-                                                <td><a href="motorIns.html">R899912 </a> </td>
-                                                
-                                                
-                                                <td>01/10/2020  </td>
-                                                
-                                                
-                                                <td> Request for a Car Insurance </td>
-                                                
-                                                <td>RSA Insurance</td>
-                                                       
-                                                <td>Quotation Received</td>
-                                                
-                                                
-                                                <td>
-                                                    <a href="#" class="mr-2"  data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit text-info font-16" ></i></a>
-                                                    <a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt text-danger font-16"></i></a>
-                                                    <a href="#"  class="mr-2"  data-toggle="tooltip" data-placement="top" title="Confirm"><i class="fa fa-check-circle text-success font-16"  id="confirms"></i>
-                                                    </td>
-                                    </tr>
-                     
+                                </tr>
+                                <tr>
+                                        <td style="text-align: center;" ><input type="checkbox" name="name1"  text-align:center;  onchange="window.location.href='compareOffers.html'" /></td>
+                                        <td><a href="motorIns.html">R899912 </a> </td>
+                                        
+                                        
+                                        <td>01/10/2020  </td>
+                                        
+                                        
+                                        <td> Request for a Car Insurance </td>
+                                        
+                                        <td>RSA Insurance</td>
+                                               
+                                        <td>Quotation Received</td>
+                                        
+                                        
+                                        <td>
+                                            <a href="#" class="mr-2"  data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit text-info font-16" ></i></a>
+                                            <a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                            <a href="#"  class="mr-2"  data-toggle="tooltip" data-placement="top" title="Confirm"><i class="fa fa-check-circle text-success font-16"  id="confirms"></i>
+                                            </td>
+                            </tr>
+             
+                            <tr>
+                                    <td style="text-align: center;"><input type="checkbox" name="name1"  text-align:center;  onchange="window.location.href='compareOffers.html'" /></td>
+                                    <td>R789990  </td>
+                                    
+                                    
+                                    <td>02/07/2020 </td>
+                                    
+                                    
+                                    <td> Home Insurance Quote</td>
+                                    
+                                    <td>AXA Insurance</td>
+                                           
+                                        
+                                    <td>Payment Pending</td>
+                                    
+                                    
+                                    <td>
+                                        <a href="#" class="mr-2" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit text-info font-16"></i></a>
+                                        <a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                        <a href="#" class="mr-2" data-toggle="tooltip" data-placement="top" title="Payment Pending"><i class="fas fa-credit-card  text-warning font-16"></i></a>
+                                        <a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Confirm"><i class="fa fa-check-circle text-success font-16"  id="confirmed"></i>
+                                            <a href="#" data-toggle="tooltip" data-placement="top" title="Pull back"><i class="fas fa-step-backward text-dark font-16"></i></a>
+                                                 </td>
+                                                                            </tr>
+                                                                                 <tr>
+<td style="text-align: center;"><input type="checkbox" name="name1"  text-align:center;  onchange="window.location.href='compareOffers.html'" /></td>
+                                    <td >R789990 </td>
+                                    
+                                    
+                                    <td>02/07/2020</td>
+                                    
+                                    
+                                    <td> Home Insurance Quote</td>
+                                    
+                                    <td>RSA Insurance</td>
+                                           
+                                    <td>Payment Pending</td>
+                                    
+                                    
+                                    <td>
+                                        <a href="#" class="mr-2" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit text-info font-16"></i></a>
+<a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+<a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Payment Pending"><i class="fas fa-credit-card  text-warning font-16"></i></a>
+<a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Confirm"><i class="fa fa-check-circle text-success font-16"  id="confir"></i>
+<a href="#" data-toggle="tooltip" data-placement="top" title="Pull back"><i class="fas fa-step-backward text-dark font-16"></i></a>
+</td>
+                                    
                                     <tr>
-                                            <td style="text-align: center;"><input type="checkbox" name="name1"  text-align:center;  onchange="window.location.href='compareOffers.html'" /></td>
-                                            <td>R789990  </td>
+                                            <td style="text-align: center;"><input type="checkbox" name="name1"  text-align:center;   onchange="window.location.href='compareOffers.html'" /></td>
+                                            <td>R899945</td>
                                             
                                             
-                                            <td>02/07/2020 </td>
+                                            <td>02/02/2020 </td>
                                             
                                             
-                                            <td> Home Insurance Quote</td>
+                                            <td> Request for Medical Insurance</td>
+                                            
+                                            <td>AIG Insurance</td>
+                                                   
+                                            <td>Quotation Received</td>
+                                            
+                                            <td>
+                                                <a href="#" class="mr-2"  data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit text-info font-16" ></i></a>
+                                                <a href="#" class="mr-2"  data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                                <a href="#"   data-toggle="tooltip" data-placement="top" title="Confirm"><i class="fa fa-check-circle text-success font-16"  id="confi"></i>
+                                                </td>
+                                                                                    </tr>
+                                                                                         <tr>
+                                                                                                <td style="text-align: center;"><input type="checkbox" name="name1"  text-align:center;  onchange="window.location.href='compareOffers.html'" /></td>
+                                            <td>R899945</td>
+                                            
+                                            
+                                            <td>02/02/2020 </td>
+                                            
+                                            
+                                            <td>Request for Medical Insurance </td>
                                             
                                             <td>AXA Insurance</td>
                                                    
-                                                
-                                            <td>Payment Pending</td>
+                                            <td>Quotation Received</td>
                                             
                                             
                                             <td>
-                                                <a href="#" class="mr-2" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit text-info font-16"></i></a>
+                                                <a href="#" class="mr-2"  data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit text-info font-16" ></i></a>
                                                 <a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt text-danger font-16"></i></a>
-                                                <a href="#" class="mr-2" data-toggle="tooltip" data-placement="top" title="Payment Pending"><i class="fas fa-credit-card  text-warning font-16"></i></a>
-                                                <a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Confirm"><i class="fa fa-check-circle text-success font-16"  id="confirmed"></i>
-                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Pull back"><i class="fas fa-step-backward text-dark font-16"></i></a>
-                                                         </td>
-                                                                                    </tr>
-                                                                                         <tr>
-<td style="text-align: center;"><input type="checkbox" name="name1"  text-align:center;  onchange="window.location.href='compareOffers.html'" /></td>
-                                            <td >R789990 </td>
+                                                <a href="#"  data-toggle="tooltip" data-placement="top" title="Confirm"><i class="fa fa-check-circle text-success font-16"  id="conf"></i>
+                                                </td>
                                             
-                                            
-                                            <td>02/07/2020</td>
-                                            
-                                            
-                                            <td> Home Insurance Quote</td>
-                                            
-                                            <td>RSA Insurance</td>
-                                                   
-                                            <td>Payment Pending</td>
-                                            
-                                            
-                                            <td>
-                                                <a href="#" class="mr-2" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit text-info font-16"></i></a>
-    <a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt text-danger font-16"></i></a>
-    <a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Payment Pending"><i class="fas fa-credit-card  text-warning font-16"></i></a>
-    <a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Confirm"><i class="fa fa-check-circle text-success font-16"  id="confir"></i>
-        <a href="#" data-toggle="tooltip" data-placement="top" title="Pull back"><i class="fas fa-step-backward text-dark font-16"></i></a>
-  </td>
-                                            
-                                            <tr>
-                                                    <td style="text-align: center;"><input type="checkbox" name="name1"  text-align:center;   onchange="window.location.href='compareOffers.html'" /></td>
-                                                    <td>R899945</td>
-                                                    
-                                                    
-                                                    <td>02/02/2020 </td>
-                                                    
-                                                    
-                                                    <td> Request for Medical Insurance</td>
-                                                    
-                                                    <td>AIG Insurance</td>
-                                                           
-                                                    <td>Quotation Received</td>
-                                                    
-                                                    <td>
-                                                        <a href="#" class="mr-2"  data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit text-info font-16" ></i></a>
-                                                        <a href="#" class="mr-2"  data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt text-danger font-16"></i></a>
-                                                        <a href="#"   data-toggle="tooltip" data-placement="top" title="Confirm"><i class="fa fa-check-circle text-success font-16"  id="confi"></i>
-                                                        </td>
-                                                                                            </tr>
-                                                                                                 <tr>
-                                                                                                        <td style="text-align: center;"><input type="checkbox" name="name1"  text-align:center;  onchange="window.location.href='compareOffers.html'" /></td>
-                                                    <td>R899945</td>
-                                                    
-                                                    
-                                                    <td>02/02/2020 </td>
-                                                    
-                                                    
-                                                    <td>Request for Medical Insurance </td>
-                                                    
-                                                    <td>AXA Insurance</td>
-                                                           
-                                                    <td>Quotation Received</td>
-                                                    
-                                                    
-                                                    <td>
-                                                        <a href="#" class="mr-2"  data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit text-info font-16" ></i></a>
-                                                        <a href="#"  class="mr-2" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt text-danger font-16"></i></a>
-                                                        <a href="#"  data-toggle="tooltip" data-placement="top" title="Confirm"><i class="fa fa-check-circle text-success font-16"  id="conf"></i>
-                                                        </td>
-                                                    
-                                                                                                                                                   
-                                                                                                                                                                                   
-                                                                                                                                                                                   
-                                    
-                                    </tbody>
-                                </table>        
-                            </div>
-                        </div>
-                    </div> <!-- end col -->
-                </div> <!-- end row -->  
-
-            </div><!-- container -->
+                                                                                                                                           
+                                                                                                                                                                           
+                                                                                                                                                                           
+                            
+                            </tbody>
+                        </table>        
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div> <!-- end row -->  
 
 
-
-
-            <div class="page-content">
-
+               </div>
+      
+                <div id="Share" class="tabcontent" style="height: 480px;">
                     <div class="container-fluid">
                         <!-- Page-Title -->
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="page-title-box">
-                                    <div class="float-right">
-                                       
-                                    </div>
-                                    <h5>Notifications:</h5>
-                                    
-                                </div><!--end page-title-box-->
-                            </div><!--end col-->
-                            
-                        </div>
+                      
                         
                         <!-- end page title end breadcrumb -->
                         
@@ -603,6 +644,12 @@
                         </div> <!-- end row -->  
         
                     </div><!-- container -->
+ 
+      </div>
+                    
+    
+
+                
 
 
 
@@ -614,13 +661,7 @@
 
 
 
-
-                 <footer class="footer text-center text-sm-left">
-                    &copy; 2020 Insurance 
-                </footer><!--end footer-->
-            </div>
-            <!-- end page content -->
-        </div>
+                   </div>
         <!-- end page-wrapper -->
           <!-- Required datatable js -->
           <script src="../assets/plugins/datatables/jquery.dataTables.min.js"></script>
@@ -791,6 +832,28 @@ document.getElementById('confirms').onclick = function(){
         function OpenWindow(info) {
   window.open(info,'WinName','height=400,width=600,resizable=yes,scrollbars=yes');
 }</script>
-
+<script>
+     function openPage(pageName,elmnt,color) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablink");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+              }
+              document.getElementById(pageName).style.display = "block";
+              elmnt.style.backgroundColor = color;
+            }
+            
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+            </script>
+              <script>
+                    function goBack() {
+                      window.history.back();
+                    }
+</script>
     </body>
 </html>
