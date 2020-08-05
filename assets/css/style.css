@@ -63,7 +63,7 @@ body {
   overflow-x: hidden;
   font-size: 13px;
   background-color: #eaf0f7;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #50649c;
 }
 
@@ -88,7 +88,7 @@ h3 {
 
 h4 {
   line-height: 22px;
-  font-size: 18px;
+  font-size: 23px;
 }
 
 h5 {
@@ -110,8 +110,9 @@ p {
 }
 
 a {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #50649c;
+  font-size: 16px;
 }
 
 a:hover, a:active, a:focus {
@@ -297,6 +298,8 @@ strong {
 
 .breadcrumb-item.active {
   color: #7081b9;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 
 .shadow {
@@ -816,7 +819,7 @@ small {
 .main-menu-inner .menu-body .nav-link {
   position: relative;
   color: #7c92a7;
-  font-size: 13px;
+  font-size: 15px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1475,8 +1478,8 @@ small {
 
 .btn {
   border-radius: 3px;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   line-height: 24px;
 }
 
@@ -2871,7 +2874,7 @@ button.bg-white:focus, button.bg-white:hover {
 .table thead tr th {
   font-weight: 500;
   color: #50649c;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .table td {
@@ -3148,7 +3151,7 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:fir
 label {
   font-weight: 400;
   color: #656d9a;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .custom-control-label {
@@ -3156,7 +3159,7 @@ label {
 }
 
 .form-control {
-  font-size: 13px;
+  font-size: 15px;
   border: 1px solid lightblue;
   height: calc(2.3rem + 2px);
   color: #2f5275;
@@ -4771,7 +4774,7 @@ dt {
 }
 
 .form-wizard-wrapper label {
-  font-size: 13px;
+  font-size: 15px;
   text-align: right;
 }
 

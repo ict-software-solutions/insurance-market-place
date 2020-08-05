@@ -190,8 +190,8 @@ button:focus {
 }
 button,input,optgroup,select,textarea {
  margin:0;
- font-family:inherit;
- font-size:inherit;
+ font-family:"Roboto", sans-serif;
+ font-size:15px;
  line-height:inherit
 }
 button,input {
@@ -1341,6 +1341,7 @@ pre code {
 }
 .table td,.table th {
  padding:.75rem;
+ font-size: 15px !important;
  vertical-align:top;
  border-top:1px solid #dee2e6
 }
